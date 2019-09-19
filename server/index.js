@@ -7,14 +7,13 @@ const parceloptions = {
 }
 const parcelentry = Path.resolve(__dirname, "../client/index.html")
 const bundler = new Parcel(parcelentry, parceloptions)
+const staticdir = Path.resolve(__dirname, "../static")
 
 const app = express()
 const port = process.env.PORT || 3000
 
-app.get('/hello', (req,res)=> {
-    res.send('Hello!');    
-})
-
+app.use('/static',express.static(staticdir))
+app.use('/api',require('./api.js'))
 app.use(bundler.middleware())
 
 app.listen(port, ()=>{ console.log('Listening on port ',port)})
