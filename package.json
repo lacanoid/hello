@@ -5,10 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":  "(cd server ; npm run dev)",
+    "dev": "(cd server ; npm run dev)",
     "start": "(cd server ; npm run start)",
-    "build": "parcel build client/index.html"
+    "build": "parcel build client/index.html --out-dir=./build"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.10"
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }

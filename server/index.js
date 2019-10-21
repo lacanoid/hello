@@ -8,7 +8,7 @@ const parceloptions = {
 const parcelentry = Path.resolve(__dirname, "../client/index.html")
 const bundler = new Parcel(parcelentry, parceloptions)
 const staticdir = Path.resolve(__dirname, "../static")
-const builddir = Path.resolve(__dirname, "../dist")
+const builddir = Path.resolve(__dirname, "../build")
 
 const app = express()
 const port = process.env.PORT || 3000

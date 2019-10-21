@@ -1,4 +1,15 @@
 h1 {
-    text-shadow: 10px 10px 10px gray;
     font-family: Helvetica;
+}
+
+body {
+    background: lightgray;
+}
+
+main {
+    background: white;
+    box-shadow: 10px 10px 10px gray;
+    max-width: 760px;
+    padding: 2em 4em;
+    margin: auto;
 }
